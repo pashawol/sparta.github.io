@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'CoreSansA15Thin';
+  src: url('CoreSansA15Thin.eot');
+  src: url('CoreSansA15Thin.woff2') format('woff2'),
+       url('CoreSansA15Thin.woff') format('woff'),
+       url('CoreSansA15Thin.ttf') format('truetype'),
+       url('CoreSansA15Thin.svg#CoreSansA15Thin') format('svg'),
+       url('CoreSansA15Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoreSansA25ExtraLight';
+  src: url('CoreSansA25ExtraLight.eot');
+  src: url('CoreSansA25ExtraLight.woff2') format('woff2'),
+       url('CoreSansA25ExtraLight.woff') format('woff'),
+       url('CoreSansA25ExtraLight.ttf') format('truetype'),
+       url('CoreSansA25ExtraLight.svg#CoreSansA25ExtraLight') format('svg'),
+       url('CoreSansA25ExtraLight.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoreSansA65Bold';
+  src: url('CoreSansA65Bold.eot');
+  src: url('CoreSansA65Bold.woff2') format('woff2'),
+       url('CoreSansA65Bold.woff') format('woff'),
+       url('CoreSansA65Bold.ttf') format('truetype'),
+       url('CoreSansA65Bold.svg#CoreSansA65Bold') format('svg'),
+       url('CoreSansA65Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

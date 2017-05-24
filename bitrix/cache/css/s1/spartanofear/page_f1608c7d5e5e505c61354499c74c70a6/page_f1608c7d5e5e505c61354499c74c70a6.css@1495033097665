@@ -1,0 +1,28 @@
+
+
+/* Start:/bitrix/templates/spartanofear/components/bitrix/catalog.section.list/sections/style.css?1484223771429*/
+.r_blog .sections {}
+.r_blog .sections ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.r_blog .sections ul li {
+	display: block;
+}
+.r_blog .sections ul li a {
+	display: block;
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+}
+.r_blog .sections ul li a span {
+	font-size: 18px;
+	color: #000000;
+}
+.r_blog .sections ul li.active a span,
+.r_blog .sections ul li a:hover span {
+	color: #ff0000;
+	border-bottom: 1px #ff0000 dashed;
+}
+/* End */
+/* /bitrix/templates/spartanofear/components/bitrix/catalog.section.list/sections/style.css?1484223771429 */

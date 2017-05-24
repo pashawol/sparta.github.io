@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'FuturaFuturisBlackC';
+  src: url('FuturaFuturisBlackC.eot');
+  src: url('FuturaFuturisBlackC.woff2') format('woff2'),
+       url('FuturaFuturisBlackC.woff') format('woff'),
+       url('FuturaFuturisBlackC.ttf') format('truetype'),
+       url('FuturaFuturisBlackC.svg#FuturaFuturisBlackC') format('svg'),
+       url('FuturaFuturisBlackC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url('FuturaDemiC.eot');
+  src: url('FuturaDemiC.woff2') format('woff2'),
+       url('FuturaDemiC.woff') format('woff'),
+       url('FuturaDemiC.ttf') format('truetype'),
+       url('FuturaDemiC.svg#FuturaDemiC') format('svg'),
+       url('FuturaDemiC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaDemiC-Italic';
+  src: url('FuturaDemiC-Italic.eot');
+  src: url('FuturaDemiC-Italic.woff2') format('woff2'),
+       url('FuturaDemiC-Italic.woff') format('woff'),
+       url('FuturaDemiC-Italic.ttf') format('truetype'),
+       url('FuturaDemiC-Italic.svg#FuturaDemiC-Italic') format('svg'),
+       url('FuturaDemiC-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url('FuturaBookC.eot');
+  src: url('FuturaBookC.woff2') format('woff2'),
+       url('FuturaBookC.woff') format('woff'),
+       url('FuturaBookC.ttf') format('truetype'),
+       url('FuturaBookC.svg#FuturaBookC') format('svg'),
+       url('FuturaBookC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaBookC-Italic';
+  src: url('FuturaBookC-Italic.eot');
+  src: url('FuturaBookC-Italic.woff2') format('woff2'),
+       url('FuturaBookC-Italic.woff') format('woff'),
+       url('FuturaBookC-Italic.ttf') format('truetype'),
+       url('FuturaBookC-Italic.svg#FuturaBookC-Italic') format('svg'),
+       url('FuturaBookC-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,42 @@
+function prLPLoad(t_data)
+{
+	if($(this).hasClass('disabled')) return false;
+	var t_data 	= $(this).data('data');
+	$.post(
+		LP_PATH + '/include/a_load.php',
+		t_data,
+		function (data) {
+			$.fancybox(data, {
+				padding: 0,
+				helpers: {
+					overlay:
+					{
+						css:
+						{
+							'background' : 'rgba(0, 0, 0, 0.5)',
+						},
+						locked: false
+					}
+				},
+				afterShow: function()
+				{
+					$('.jqLpMask').each(prLpMask);
+					$('.jqSwiper').each(prSwiper);
+				}
+			});
+		}
+	);
+	return false;
+}
+function prLpMask() {
+	var t_type = $(this).data('type');
+
+	if(t_type == 'mobile')
+	{
+		$(this).mask("9 (999) 999-99-99");
+	}
+}
+jQuery(document).ready(function($) {
+	$('.jqLpMask').each(prLpMask);
+	$(document).on('click', '.jqLPLoad', prLPLoad);
+});

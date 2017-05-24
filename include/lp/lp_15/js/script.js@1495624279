@@ -1,0 +1,101 @@
+function prLPLoad(t_data)
+{
+	if($(this).hasClass('disabled')) return false;
+	var t_data 	= $(this).data('data');
+	$.post(
+		LP_PATH + '/include/a_load.php',
+		t_data,
+		function (data) {
+			$.fancybox(data, {
+				padding: 0,
+				helpers: {
+					overlay:
+					{
+						css:
+						{
+							'background' : 'rgba(0, 0, 0, 0.5)',
+						},
+						locked: false
+					}
+				},
+				afterShow: function()
+				{
+					$('.jqLpMask').each(prLpMask);
+				}
+			});
+		}
+	);
+	return false;
+}
+function prLpMask() {
+	var t_type = $(this).data('type');
+
+	if(t_type == 'mobile')
+	{
+		$(this).mask("9 (999) 999-99-99");
+	}
+}
+function prScroll(e)
+{
+	if($(window).scrollTop() > $('.r_1').height())
+	{
+		$('.r_top').addClass('active');
+	}
+	else
+	{
+		$('.r_top').removeClass('active');
+	}
+}
+jQuery(document).ready(function($) {
+
+	$('.jqLpMask').each(prLpMask);
+	$(window).on('scroll load', prScroll);
+	$(document).on('click', '.jqLPLoad', prLPLoad);
+	$('a[href*=#]').bind('click', function(e){
+		var anchor 	= $(this);
+		var href 	= anchor.attr('href');
+		if(href != '#')
+		{
+			//scrollTop: $(href).offset().top - $('.r_top').height()
+			$('html, body').stop().animate({
+				scrollTop: $(href).offset().top
+			}, 1000);
+			e.preventDefault();
+		}
+	});
+
+	/* FancyBox */
+	fbImages 	= 'a[href$=".jpeg"]:not(.nofancybox),a[href$=".JPEG"]:not(.nofancybox),a[href$=".jpg"]:not(.nofancybox),a[href$=".JPG"]:not(.nofancybox),a[href$=".gif"]:not(.nofancybox),a[href$=".GIF"]:not(.nofancybox),a[href$=".png"]:not(.nofancybox),a[href$=".PNG"]:not(.nofancybox),a[href$=".bmp"]:not(.nofancybox),a[href$=".BMP"]:not(.nofancybox)';
+	fbSettingG 	= {
+		padding		: 0,
+		topRatio	: 0,
+		helpers:
+		{
+			overlay:
+			{
+				css:
+				{
+					'background' : 'rgba(0, 0, 0, 0.5)'
+				},
+				locked: false
+			}
+		}
+	}
+	$(fbImages).addClass('fancybox').attr('rel', 'gallery');
+	if($('.fancybox').length > 0)
+	{
+		$('.fancybox').fancybox(fbSettingG);
+	}
+
+	if($('.r_11').length)
+	{
+		$('.r_11 .items').smoothDivScroll(
+		{
+			hotSpotScrolling 			: false,
+			manualContinuousScrolling 	: true,
+			touchScrolling 				: true,
+			autoScrollingMode 			: 'onStart',
+			autoScrollingDirection 		: 'endlessLoopRight'
+		});
+	}
+});

@@ -1,0 +1,25 @@
+function prResize()
+{
+	var h = $(window).height();
+	if(h < 600) h = 600;
+	$('.r_1').height(h);
+}
+
+jQuery(document).ready(function($) {
+
+	$(window).load(function() {
+		$('.r_1').vidbg({
+			'mp4' 		: LP_PATH + '/video/r1.mp4'
+			,'webm' 		: LP_PATH + '/video/r1.webm'
+			//,'poster' 	: LP_PATH + '/video/r1.jpg'
+		},
+		{
+			muted 		: true,
+			loop 		: true,
+			overlay 	: true
+		});
+	});
+
+	$(window).on('resize load', prResize);
+
+});

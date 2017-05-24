@@ -1,0 +1,57 @@
+jQuery(document).ready(function($) {
+
+	/* Slider */
+	function prSwiper()
+	{
+		var t 					= $(this),
+			sw 					= t.find('.swiper-container'),
+			data 				= {},
+			t_d 				= t.data('data');
+			t_t 				= t_d.type;
+
+		if(t_t == 'r_4')
+		{
+			t_d.slidesPerView 			= 1;
+			t_d.loop 					= true;
+			t_d.spaceBetween 			= 40;
+			t_d.prevButton 				= t.closest('.main').find('.button-prev')[0];
+			t_d.nextButton 				= t.closest('.main').find('.button-next')[0];
+		}
+
+		var malikSwiper = new Swiper (sw, t_d);
+	}
+	$('.jqSwiper').each(prSwiper);
+
+	function prScroll(e)
+	{
+		/* Nav */
+		$('.r_top a').each(function() {
+			var objA = $($(this).attr('href'));
+			if(objA.length)
+			{
+				if ($(window).scrollTop() + $('.r_top').height() >= objA.offset().top)
+				{
+					$('.r_top li').removeClass('active');
+					$(this).parents('li').addClass('active');
+				}
+			}
+		});
+
+	}
+	$(window).on('scroll load', function() {
+		prScroll();
+	});
+
+	$('a[href*=#]').bind('click', function(e){
+		var anchor 	= $(this);
+		var href 	= anchor.attr('href');
+		if(href != '#')
+		{
+			$('html, body').stop().animate({
+				scrollTop: $(href).offset().top - $('.r_top').height()
+			}, 1000);
+			e.preventDefault();
+		}
+	});
+
+});
